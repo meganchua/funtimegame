@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Moving Background
+  - Static Background
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Static Background
+    uniqueID: 1868724153
+    locked: 0
+  - name: Moving Background
+    uniqueID: 3068438427
     locked: 0
