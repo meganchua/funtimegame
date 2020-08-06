@@ -4,6 +4,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private float moveSpeed;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        moveSpeed = 3f;
+    }
+
+    private void Update()
+    {
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch(touch.phase)
+            {
+                case TouchPhase.Began:
+                    if (touch.position.x < Screen.width / 2)
+                        rb.velocity = new Vector2(-moveSpeed, 0f);
+
+                    if(touch.position.x > Screen.width / 2)
+                        rb.velocity = new Vector2(moveSpeed, 0f);
+                    break;
+
+                case TouchPhase.Ended:
+                    rb.velocity = new Vector2(0f, 0f);
+                    break;
+            }
+        }
+
+    }
+
+    /*
     public float moveSpeed = 300;
     public GameObject character;
 
@@ -26,11 +60,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if(Input.GetTouch (i).position.x > ScreenWidth / 2)
             {
-                RunCharacter(1.0f);
+                //RunCharacter(1.0f);
+                RunCharacter(0.25f);
             }
             if(Input.GetTouch (i).position.x < ScreenWidth / 2)
             {
-                RunCharacter(-1.0f);
+                //RunCharacter(-1.0f);
+                RunCharacter(-0.25f);
             }
             ++i;
         }
@@ -47,4 +83,5 @@ public class PlayerMovement : MonoBehaviour
     {
         characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
     }
+    */
 }
