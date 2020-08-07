@@ -47,6 +47,9 @@ TagManager:
   - name: Moving Background
     uniqueID: 3068438427
     locked: 0
+  - name: Obstacles
+    uniqueID: 3407163859
+    locked: 0
   - name: Player
     uniqueID: 4226207695
     locked: 0
