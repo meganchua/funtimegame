@@ -14,7 +14,7 @@ public class CollissionManager : MonoBehaviour
         //e.transform.position = transform.position;
 
         /*
-        if(other.gameObject.tag == "Point")
+        if(other.gameObject.tag == "Point") -OR- if(other.gameObject.CompareTag("Point"))
         {
             Debug.Log("point");
             Destroy(other.gameObject);
