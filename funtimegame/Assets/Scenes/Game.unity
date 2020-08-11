@@ -1054,6 +1054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WatermelonPop
       objectReference: {fileID: 0}
+    - target: {fileID: 2288425650906918722, guid: f6191361257cbe14b98eff6f546aacf8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6191361257cbe14b98eff6f546aacf8, type: 3}
 --- !u!1 &2288425650016113084 stripped
@@ -1098,6 +1103,48 @@ MonoBehaviour:
   delay: 1
   repeat: 10
   obstacles: {fileID: 2288425650016113084}
+--- !u!61 &2288425650016113087
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288425650016113084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: -1.6854687}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9380026, y: 1.4793892}
+  m_EdgeRadius: 0
+--- !u!58 &2288425650016113088
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288425650016113084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03372574, y: 0.20225632}
+  serializedVersion: 2
+  m_Radius: 1.6495029
 --- !u!1001 &3606122867503287931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,6 +1222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Cream
       objectReference: {fileID: 0}
+    - target: {fileID: 3606122867474070055, guid: 1614dad2c61ab9a4dba5306547239459,
+        type: 3}
+      propertyPath: m_TagString
+      value: Death
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1614dad2c61ab9a4dba5306547239459, type: 3}
 --- !u!1 &3606122867503287932 stripped
@@ -1204,6 +1256,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &3606122867503287934
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606122867503287932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03374839, y: -1.7865963}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8706012, y: 1.2771301}
+  m_EdgeRadius: 0
 --- !u!114 &3606122867503287935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,3 +1297,19 @@ MonoBehaviour:
   delay: 1
   repeat: 10
   obstacles: {fileID: 3606122867503287932}
+--- !u!58 &3606122867503287936
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606122867503287932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03372574, y: 0.4045143}
+  serializedVersion: 2
+  m_Radius: 1.5146961
