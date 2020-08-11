@@ -14,7 +14,7 @@ public class CollissionManager : MonoBehaviour
         //e.transform.position = transform.position;
 
         /*
-        if(other.gameObject.tag == "Point") -OR- if(other.gameObject.CompareTag("Point"))
+        if(other.gameObject.tag == "Score") -OR- if(other.gameObject.CompareTag("Point"))
         {
             Debug.Log("point");
             Destroy(other.gameObject);
@@ -22,14 +22,20 @@ public class CollissionManager : MonoBehaviour
         */
 
 
-        //if(other.gameObject.tag == "Obstacle")
-        //{
 
+        if(other.gameObject.CompareTag("Death"))
+        {
+            //Destroy(this.gameObject);
             Destroy(other.gameObject);
             //this.gameObject.SetActive(false);
             //Application.LoadLevel(Application.loadedLevel);
 
-        //}
+        }
+        else if(other.gameObject.CompareTag("Score"))
+        {
+            Score.scoreAmount += 1;
+            Destroy(other.gameObject);
+        }
 
         /*
         //point system
