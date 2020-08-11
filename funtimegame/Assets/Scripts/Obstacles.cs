@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour
@@ -19,5 +20,14 @@ public class Obstacles : MonoBehaviour
     {
         Vector2 position = new Vector2(Random.Range(-2, 2), 10);
         Instantiate(obstacles, position, Quaternion.identity);
+        
+    }
+
+    void Update()
+    {
+        if (transform.position.y < -7)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
