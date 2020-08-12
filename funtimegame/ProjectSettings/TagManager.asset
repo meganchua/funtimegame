@@ -55,3 +55,6 @@ TagManager:
   - name: Player
     uniqueID: 4226207695
     locked: 0
+  - name: Game Over Screen
+    uniqueID: 2310525897
+    locked: 0

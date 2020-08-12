@@ -8,6 +8,10 @@ public class CollissionManager : MonoBehaviour
     //public GameObject point;
     //public int pointCount++;
 
+    public GameOver gameOver;
+    //public Score score;
+    public int finalScore;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         //GameObject e = Instantiate(explosion) as GameObject;
@@ -25,7 +29,10 @@ public class CollissionManager : MonoBehaviour
 
         if(other.gameObject.CompareTag("Death"))
         {
-            //Destroy(this.gameObject);
+
+            finalScore = Score.scoreAmount;
+            gameOver.GameOverMenu(finalScore);
+            Destroy(this.gameObject);
             Destroy(other.gameObject);
             //this.gameObject.SetActive(false);
             //Application.LoadLevel(Application.loadedLevel);

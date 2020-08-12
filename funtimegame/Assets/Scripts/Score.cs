@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public static int scoreAmount;
-    private Text scoreText;
+    public Text scoreText;
+
+    //public GameOver gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +21,10 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + scoreAmount;
+    }
+
+    public int getScore()
+    {
+        return scoreAmount;
     }
 }
