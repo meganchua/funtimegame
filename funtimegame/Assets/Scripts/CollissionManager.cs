@@ -8,9 +8,13 @@ public class CollissionManager : MonoBehaviour
     //public GameObject point;
     //public int pointCount++;
 
-    public GameOver gameOver;
+    //public GameOver gameOver;
     //public Score score;
-    public int finalScore;
+    //public int finalScore;
+
+    public Color bluecolor;
+    public Color yellowcolor;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,11 +33,24 @@ public class CollissionManager : MonoBehaviour
 
         if(other.gameObject.CompareTag("Death"))
         {
-
+            /*
+            PlayerMovement.health = PlayerMovement.health - 10;
+            Debug.Log(PlayerMovement.health);
+            Destroy(other.gameObject);
+            */
+            PlayerMovement.health -= 1;
+            Debug.Log(PlayerMovement.health);
+            Destroy(other.gameObject);
+            GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
+            //transform.GetComponent<Renderer>().material.color = bluecolor;
+            
+            /*
             finalScore = Score.scoreAmount;
             gameOver.GameOverMenu(finalScore);
             Destroy(this.gameObject);
             Destroy(other.gameObject);
+            */
+
             //this.gameObject.SetActive(false);
             //Application.LoadLevel(Application.loadedLevel);
 
@@ -42,6 +59,12 @@ public class CollissionManager : MonoBehaviour
         {
             Score.scoreAmount += 1;
             Destroy(other.gameObject);
+
+            GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
+            //this.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+            //this.gameObject.material.SetColor("_Color", Color.red);
+
+            //transform.GetComponent<Renderer>().material.color = yellowcolor;
         }
 
         /*

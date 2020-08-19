@@ -7,14 +7,38 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed;
 
+
+    public GameOver gameOver;
+    public Score score;
+    public int finalScore;
+
+    public static int health;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
+
+        health = 3;
     }
 
     private void Update()
     {
+        if(health <= 0)
+        {
+            finalScore = Score.scoreAmount;
+            gameOver.GameOverMenu(finalScore);
+            Destroy(this.gameObject);          
+        }
+        /*
+        if(health <= 0)
+        {
+            finalScore = Score.scoreAmount;
+            gameOver.GameOverMenu(finalScore);
+            Destroy(this.gameObject);
+        }
+        */
+        
         if(Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
