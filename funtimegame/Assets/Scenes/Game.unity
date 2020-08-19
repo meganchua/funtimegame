@@ -422,6 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 408169698}
+  - component: {fileID: 408169699}
   m_Layer: 0
   m_Name: Obstacles
   m_TagString: Untagged
@@ -445,6 +446,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &408169699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408169697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cca0cc1bbb30d4ea5f696edbfd6bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab1: {fileID: 6459327612936225064, guid: c54da2fac7909a74cb34c324fe696274, type: 3}
+  prefab2: {fileID: 4562377113723320112, guid: 200c1ce7b0c4f534c95b09bb209976bb, type: 3}
+  prefab3: {fileID: 6316978344332113985, guid: c4fc9144e51f0bb42a390c5b93b570a8, type: 3}
+  prefab4: {fileID: 5793086383112736114, guid: 44981904f7748404f8dfedaf0c70b2d7, type: 3}
+  prefab5: {fileID: 6253115468660079610, guid: 91426e7643d604c479bf4d70ce11a734, type: 3}
+  prefab6: {fileID: 1091156808851892363, guid: 84417c26455bd264687408aaa6425440, type: 3}
+  repeat: 10
 --- !u!1 &447870609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,6 +2195,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Score
       objectReference: {fileID: 0}
+    - target: {fileID: 2288425650906918722, guid: f6191361257cbe14b98eff6f546aacf8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6191361257cbe14b98eff6f546aacf8, type: 3}
 --- !u!1 &2288425650016113084 stripped
@@ -2216,7 +2241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4edd35f05e7fa46a644b9c7cd90281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
   repeat: 10
   obstacles: {fileID: 2288425650016113084}
 --- !u!58 &2288425650016113088
@@ -2345,12 +2369,17 @@ PrefabInstance:
     - target: {fileID: 3606122867474070055, guid: 1614dad2c61ab9a4dba5306547239459,
         type: 3}
       propertyPath: m_Name
-      value: Ice Cream
+      value: IceCream
       objectReference: {fileID: 0}
     - target: {fileID: 3606122867474070055, guid: 1614dad2c61ab9a4dba5306547239459,
         type: 3}
       propertyPath: m_TagString
       value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606122867474070055, guid: 1614dad2c61ab9a4dba5306547239459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1614dad2c61ab9a4dba5306547239459, type: 3}
@@ -2393,7 +2422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4edd35f05e7fa46a644b9c7cd90281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
   repeat: 10
   obstacles: {fileID: 3606122867503287932}
 --- !u!58 &3606122867503287936

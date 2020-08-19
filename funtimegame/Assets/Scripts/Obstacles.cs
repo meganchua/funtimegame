@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    public float delay = 0.7f;
+    private float delay;
     public float repeat = 5.0f;
     public GameObject obstacles;
 
     // Start is called before the first frame update
     void Start()
     {
+        delay = Random.Range(0.5f, 1.5f);
         InvokeRepeating("Spawn", delay, repeat);
     }
 
-    // Update is called once per frame
     void Spawn()
     {
-        Vector2 position = new Vector2(Random.Range(-2, 2), 10);
+        Vector2 position = new Vector2(Random.Range(-2.0f, 2.0f), 10);
         Instantiate(obstacles, position, Quaternion.identity);
         
     }
