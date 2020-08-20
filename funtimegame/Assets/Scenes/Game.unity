@@ -1382,6 +1382,7 @@ MonoBehaviour:
   gameOver: {fileID: 1442342825}
   score: {fileID: 541796894}
   finalScore: 0
+  decPerMin: 0
 --- !u!58 &1477433957
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1410,8 +1411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea04c5862ed443debec920cd2558b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bluecolor: {r: 0.011764707, g: 0, b: 0.9607844, a: 0}
-  yellowcolor: {r: 0.93725497, g: 0.9607844, b: 0.007843138, a: 0}
 --- !u!1 &1609174513
 GameObject:
   m_ObjectHideFlags: 0
