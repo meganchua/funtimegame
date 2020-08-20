@@ -18,12 +18,6 @@ public class GameOver : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GameOverMenu(int score)
     {
         gameObject.SetActive(true);

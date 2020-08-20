@@ -12,32 +12,29 @@ public class PlayerMovement : MonoBehaviour
     public Score score;
     public int finalScore;
 
-    public static int health;
+    public static float health;
+    public float decPerMin;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
 
-        health = 3;
+        health = 7f;
+        decPerMin = 50f;
     }
 
     private void Update()
     {
+        health -= Time.deltaTime * decPerMin / 60f;
+
+        Debug.Log(health);
         if(health <= 0)
         {
             finalScore = Score.scoreAmount;
             gameOver.GameOverMenu(finalScore);
             Destroy(this.gameObject);          
         }
-        /*
-        if(health <= 0)
-        {
-            finalScore = Score.scoreAmount;
-            gameOver.GameOverMenu(finalScore);
-            Destroy(this.gameObject);
-        }
-        */
         
         if(Input.touchCount > 0)
         {
