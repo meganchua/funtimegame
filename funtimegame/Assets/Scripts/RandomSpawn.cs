@@ -32,6 +32,7 @@ public class RandomSpawn : MonoBehaviour
         {
             whatToSpawn = Random.Range(1, 7); //7 is exclusive
 
+  
             switch (whatToSpawn)
             {
                 case 1:
@@ -53,14 +54,12 @@ public class RandomSpawn : MonoBehaviour
                     Instantiate(prefab6, position, Quaternion.identity);
                     break;
             }
-
+            
             nextSpawn = Time.time + spawnRate;
-
-            if (transform.position.y < -7)
-            {
-                Destroy(this.gameObject);
-            }
-
         }
+
+
     }
+
+ 
 }

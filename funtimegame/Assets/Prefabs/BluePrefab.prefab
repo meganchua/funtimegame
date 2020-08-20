@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7148827809533993819}
   - component: {fileID: 4307801742623527500}
   - component: {fileID: 4139120498492854183}
+  - component: {fileID: -4707854493115671919}
   m_Layer: 0
   m_Name: BluePrefab
   m_TagString: Untagged
@@ -103,3 +104,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4707854493115671919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459327612936225064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d5ce9cfbdda564780b8c2f0ea69e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

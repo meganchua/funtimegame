@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 216999826587836213}
   - component: {fileID: 3846087541488691774}
   - component: {fileID: 4749832886595570599}
+  - component: {fileID: -1600536697926779608}
   m_Layer: 0
   m_Name: PurplePrefab
   m_TagString: Untagged
@@ -103,3 +104,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1600536697926779608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793086383112736114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d5ce9cfbdda564780b8c2f0ea69e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
