@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3712080131928084791}
   - component: {fileID: 4709582509517002779}
   - component: {fileID: 4559623965107982731}
+  - component: {fileID: 5346616207733477607}
   m_Layer: 0
   m_Name: PinkPrefab
   m_TagString: Untagged
@@ -116,3 +117,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d5ce9cfbdda564780b8c2f0ea69e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &5346616207733477607
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6316978344332113985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00330621}
+  serializedVersion: 2
+  m_Radius: 0.084659256
