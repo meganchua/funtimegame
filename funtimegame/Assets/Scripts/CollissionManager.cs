@@ -6,6 +6,12 @@ public class CollissionManager : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
+        GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
+        Destroy(other.gameObject);
+        PlayerMovement.health += 1f;
+        Score.scoreAmount += 1;
+        //Debug.Log("ouch");
+
         if(other.gameObject.CompareTag("Death"))
         {
             // Health goes down
