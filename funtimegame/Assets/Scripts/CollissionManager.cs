@@ -8,9 +8,15 @@ public class CollissionManager : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
         Destroy(other.gameObject);
-        PlayerMovement.health += 1f;
+
+        if(PlayerMovement.health > 3.5f)
+            PlayerMovement.health = 4f;
+        else                
+            PlayerMovement.health += 0.5f;
+
         Score.scoreAmount += 1;
         //Debug.Log("ouch");
+
 
         if(other.gameObject.CompareTag("Death"))
         {

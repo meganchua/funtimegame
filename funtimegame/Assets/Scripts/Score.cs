@@ -8,8 +8,6 @@ public class Score : MonoBehaviour
     public static int scoreAmount;
     public Text scoreText;
 
-    //public GameOver gameOver;
-
     // Start is called before the first frame update
     void Start()
     {

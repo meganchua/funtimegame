@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 3f;
 
         health = 4f;
-        decPerMin = 50f;
+        decPerMin = 25f;
     }
 
     private void Update()
