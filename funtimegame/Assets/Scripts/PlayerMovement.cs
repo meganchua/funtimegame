@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
 
-        health = 7f;
+        health = 4f;
         decPerMin = 50f;
     }
 
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         health -= Time.deltaTime * decPerMin / 60f;
 
-        Debug.Log(health);
+        //Debug.Log(health);
         if(health <= 0)
         {
             finalScore = Score.scoreAmount;
