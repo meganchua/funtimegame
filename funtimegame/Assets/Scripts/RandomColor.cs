@@ -8,9 +8,11 @@ using TMPro;
 
 public class RandomColor : MonoBehaviour
 {
-    public TMP_Text color1, color2, color3, color4, color5, color6;
+    //edge case: at the start of the game, some of the tags are wrong
+    public TMP_Text BlueText, RedText, YellowText, GreenText, PinkText, PurpleText;
+    public GameObject blue, green, pink, purple, red, yellow;
 
-    public float spawnRate = 1f;
+    public float spawnRate = 10f;
 
     float nextSpawn = 0f;
 
@@ -19,7 +21,12 @@ public class RandomColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        blue.tag = "Death";
+        red.tag = "Death";
+        yellow.tag = "Death";
+        green.tag = "Death";
+        pink.tag = "Death";
+        purple.tag = "Death";
     }
 
     // Update is called once per frame
@@ -31,53 +38,89 @@ public class RandomColor : MonoBehaviour
 
             switch (whatToSpawn)
             {
-                case 1:
-                    color1.enabled = true;
-                    color2.enabled = false;
-                    color3.enabled = false;
-                    color4.enabled = false;
-                    color5.enabled = false;
-                    color6.enabled = false;
+                case 1: //blue
+                    BlueText.enabled = true;
+                    RedText.enabled = false;
+                    YellowText.enabled = false;
+                    GreenText.enabled = false;
+                    PinkText.enabled = false;
+                    PurpleText.enabled = false;
+                    blue.tag = "Score";
+                    red.tag = "Death";
+                    yellow.tag = "Death";
+                    green.tag = "Death";
+                    pink.tag = "Death";
+                    purple.tag = "Death";
                     break;
-                case 2:
-                    color1.enabled = false; ;
-                    color2.enabled = true;
-                    color3.enabled = false;
-                    color4.enabled = false;
-                    color5.enabled = false;
-                    color6.enabled = false;
+                case 2: //red
+                    BlueText.enabled = false;
+                    RedText.enabled = true;
+                    YellowText.enabled = false;
+                    GreenText.enabled = false;
+                    PinkText.enabled = false;
+                    PurpleText.enabled = false;
+                    blue.tag = "Death";
+                    red.tag = "Score";
+                    yellow.tag = "Death";
+                    green.tag = "Death";
+                    pink.tag = "Death";
+                    purple.tag = "Death";
                     break;
-                case 3:
-                    color1.enabled = false;
-                    color2.enabled = false;
-                    color3.enabled = true;
-                    color4.enabled = false;
-                    color5.enabled = false;
-                    color6.enabled = false;
+                case 3: //yellow
+                    BlueText.enabled = false;
+                    RedText.enabled = false;
+                    YellowText.enabled = true;
+                    GreenText.enabled = false;
+                    PinkText.enabled = false;
+                    PurpleText.enabled = false;
+                    blue.tag = "Death";
+                    red.tag = "Death";
+                    yellow.tag = "Score";
+                    green.tag = "Death";
+                    pink.tag = "Death";
+                    purple.tag = "Death";
                     break;
-                case 4:
-                    color1.enabled = false;
-                    color2.enabled = false;
-                    color3.enabled = false;
-                    color4.enabled = true;
-                    color5.enabled = false;
-                    color6.enabled = false;
+                case 4: //green
+                    BlueText.enabled = false;
+                    RedText.enabled = false;
+                    YellowText.enabled = false;
+                    GreenText.enabled = true;
+                    PinkText.enabled = false;
+                    PurpleText.enabled = false;
+                    blue.tag = "Death";
+                    red.tag = "Death";
+                    yellow.tag = "Death";
+                    green.tag = "Score";
+                    pink.tag = "Death";
+                    purple.tag = "Death";
                     break;
-                case 5:
-                    color1.enabled = false;
-                    color2.enabled = false;
-                    color3.enabled = false;
-                    color4.enabled = false;
-                    color5.enabled = true;
-                    color6.enabled = false;
+                case 5: //pink
+                    BlueText.enabled = false;
+                    RedText.enabled = false;
+                    YellowText.enabled = false;
+                    GreenText.enabled = false;
+                    PinkText.enabled = true;
+                    PurpleText.enabled = false;
+                    blue.tag = "Death";
+                    red.tag = "Death";
+                    yellow.tag = "Death";
+                    green.tag = "Death";
+                    pink.tag = "Score";
+                    purple.tag = "Death";
                     break;
-                case 6:
-                    color1.enabled = false;
-                    color2.enabled = false;
-                    color3.enabled = false;
-                    color4.enabled = false;
-                    color5.enabled = false;
-                    color6.enabled = true;
+                case 6: //purple
+                    BlueText.enabled = false;
+                    RedText.enabled = false;
+                    YellowText.enabled = false;
+                    GreenText.enabled = false;
+                    PinkText.enabled = false;
+                    PurpleText.enabled = true;
+                    blue.tag = "Death";
+                    red.tag = "Death";
+                    yellow.tag = "Death";
+                    green.tag = "Death";
+                    pink.tag = "Death";
+                    purple.tag = "Score";
                     break;
             }
 

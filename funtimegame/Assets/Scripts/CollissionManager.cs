@@ -12,7 +12,7 @@ public class CollissionManager : MonoBehaviour
         if(PlayerMovement.health > 3.5f)
             PlayerMovement.health = 4f;
         else                
-            PlayerMovement.health += 0.5f;
+            PlayerMovement.health += 0.5f; 
 
         Score.scoreAmount += 1;
         //Debug.Log("ouch");
