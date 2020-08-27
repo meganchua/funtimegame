@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed;
 
+    public static int isGameOver;
 
     public GameOver gameOver;
     public Score score;
@@ -20,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
 
+        isGameOver = 0;
+
         health = 4f;
-        decPerMin = 25f;
+        decPerMin = 15f;
     }
 
     private void Update()
@@ -31,11 +34,13 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(health);
         if(health <= 0)
         {
+            isGameOver = 1;
             finalScore = Score.scoreAmount;
             gameOver.GameOverMenu(finalScore);
             Destroy(this.gameObject);          
         }
-        
+
+        // touch input
         if(Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -56,53 +61,20 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-    }
-
-    /*
-    public float moveSpeed = 300;
-    public GameObject character;
-
-    private Rigidbody2D characterBody;
-    private float ScreenWidth;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ScreenWidth = Screen.width;
-        characterBody = character.GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        int i = 0;
-
-        while(i < Input.touchCount)
+        // arrow keys - DOESNT WORK
+        /*
+        Vector3 pos = transform.position;
+        if(Input.GetKey("a"))
         {
-            if(Input.GetTouch (i).position.x > ScreenWidth / 2)
-            {
-                //RunCharacter(1.0f);
-                RunCharacter(0.25f);
-            }
-            if(Input.GetTouch (i).position.x < ScreenWidth / 2)
-            {
-                //RunCharacter(-1.0f);
-                RunCharacter(-0.25f);
-            }
-            ++i;
+            pos.x -= moveSpeed * Time.deltaTime;
+            Debug.Log("A pressed");
         }
+        if(Input.GetKey("d"))
+        {
+            pos.x += moveSpeed * Time.deltaTime;
+            Debug.Log("D Pressed");
+        }
+        transform.position = pos;
+        */
     }
-
-    void FixedUpdate()
-    {
-        #if UNITY_EDITOR
-        RunCharacter(Input.GetAxis("Horizontal"));
-        #endif
-    }
-
-    private void RunCharacter(float horizontalInput)
-    {
-        characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
-    }
-    */
 }
