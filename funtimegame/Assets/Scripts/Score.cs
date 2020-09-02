@@ -19,6 +19,11 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + scoreAmount;
+
+        if(PlayerMovement.health < 0)
+        {
+            Destroy(scoreText);
+        }
     }
 
     public int getScore()
