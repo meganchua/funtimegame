@@ -32,6 +32,16 @@ public class RandomColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PlayerMovement.health < 0)
+        {
+            Destroy(BlueText);
+            Destroy(RedText);
+            Destroy(YellowText);
+            Destroy(GreenText);
+            Destroy(PinkText);
+            Destroy(PurpleText);
+        }
+
         if (Time.time > nextSpawn)
         {
             whatToSpawn = Random.Range(1, 7); //7 is exclusive
