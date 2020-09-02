@@ -32,6 +32,7 @@ public class RandomColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(PlayerMovement.health < 0)
         {
             Destroy(BlueText);
@@ -41,6 +42,7 @@ public class RandomColor : MonoBehaviour
             Destroy(PinkText);
             Destroy(PurpleText);
         }
+        */
 
         if (Time.time > nextSpawn)
         {
