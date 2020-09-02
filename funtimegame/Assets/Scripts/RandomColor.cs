@@ -12,6 +12,8 @@ public class RandomColor : MonoBehaviour
     public TMP_Text BlueText, RedText, YellowText, GreenText, PinkText, PurpleText;
     public GameObject blue, green, pink, purple, red, yellow;
 
+    public Canvas ColorCanvas;
+
     public float spawnRate = 10f;
 
     float nextSpawn = 0f;
@@ -32,17 +34,10 @@ public class RandomColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if(PlayerMovement.health < 0)
         {
-            Destroy(BlueText);
-            Destroy(RedText);
-            Destroy(YellowText);
-            Destroy(GreenText);
-            Destroy(PinkText);
-            Destroy(PurpleText);
+            ColorCanvas.sortingLayerName = "Default";
         }
-        */
 
         if (Time.time > nextSpawn)
         {
