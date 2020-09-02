@@ -58,3 +58,6 @@ TagManager:
   - name: Game Over Screen
     uniqueID: 2310525897
     locked: 0
+  - name: Start Screen
+    uniqueID: 2246340355
+    locked: 0
