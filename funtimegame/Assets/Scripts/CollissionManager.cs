@@ -12,7 +12,7 @@ public class CollissionManager : MonoBehaviour
         if(other.gameObject.CompareTag("Death"))
         {
             // Health goes down
-            PlayerMovement.health -= 0.5f;
+            PlayerMovement.health -= 0.05f;
 
             // Changes the color of player to color of what it ran into
             GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
@@ -25,10 +25,10 @@ public class CollissionManager : MonoBehaviour
             Score.scoreAmount += 1;
 
             // Health goes up
-            if(PlayerMovement.health > 3.5f)
-                PlayerMovement.health = 4f;
+            if(PlayerMovement.health > .35f)
+                PlayerMovement.health = .45f;
             else                
-                PlayerMovement.health += 0.25f; 
+                PlayerMovement.health += 0.1f; 
 
             // Changes the color of player to color of what it ran into
             GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;

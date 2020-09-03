@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score: " + scoreAmount;
+        scoreText.text = "" + scoreAmount;
 
         if(PlayerMovement.health < 0)
         {
