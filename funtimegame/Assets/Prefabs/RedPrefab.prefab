@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5948132462983841653}
   - component: {fileID: 7583527257411389511}
   - component: {fileID: 3466456230142727211}
-  - component: {fileID: -9088780121042414808}
+  - component: {fileID: 4293484304085580314}
   m_Layer: 0
   m_Name: RedPrefab
   m_TagString: Death
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6253115468660079610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: -887803437
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.64705884, b: 0.64705884, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6028bba12d75cad4694bc2442a7c3acf, type: 3}
+  m_Color: {r: 1, g: 0.18039216, b: 0.3882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d5ce9cfbdda564780b8c2f0ea69e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &-9088780121042414808
+--- !u!58 &4293484304085580314
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +130,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.15797883, y: -1.264497}
   serializedVersion: 2
-  m_Radius: 0.09299444
+  m_Radius: 3.1403718
