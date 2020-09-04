@@ -14,7 +14,7 @@ public class RandomColor : MonoBehaviour
 
     public Canvas ColorCanvas;
 
-    public float spawnRate = 10f;
+    public float spawnRate = 5f;
 
     float nextSpawn = 0f;
 
