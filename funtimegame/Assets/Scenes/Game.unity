@@ -1142,7 +1142,7 @@ MonoBehaviour:
   red: {fileID: 6253115468660079610, guid: 91426e7643d604c479bf4d70ce11a734, type: 3}
   yellow: {fileID: 1091156808851892363, guid: 84417c26455bd264687408aaa6425440, type: 3}
   ColorCanvas: {fileID: 666410952}
-  spawnRate: 10
+  spawnRate: 5
 --- !u!1 &740500112
 GameObject:
   m_ObjectHideFlags: 0
