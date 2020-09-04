@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CollissionManager : MonoBehaviour
 {
-    /* changing bucket color
-    public GameObject white, black, red, orange, teal, pink, purple
+    // changing bucket color
+    public GameObject white, black, red, orange, teal, pink, purple;
+
     void Start()
     {
         white.SetActive(true);
@@ -16,11 +17,10 @@ public class CollissionManager : MonoBehaviour
         pink.SetActive(false);
         purple.SetActive(false);
     }
-    */
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        /* changing bucket color
+        // changing bucket color
         if(other.gameObject.tag.Contains("Black"))
         {
             white.SetActive(false);
@@ -91,9 +91,8 @@ public class CollissionManager : MonoBehaviour
             pink.SetActive(false);
             purple.SetActive(false);             
         }    
-        */
 
-        GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
+        //GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
         Destroy(other.gameObject);
 
         //if(other.gameObject.CompareTag("Death"))

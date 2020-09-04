@@ -6,6 +6,18 @@ TagManager:
   tags:
   - Death
   - Score
+  - Death Black
+  - Death Red
+  - Death Orange
+  - Death Teal
+  - Death Pink
+  - Death Purple
+  - Score Black
+  - Score Red
+  - Score Orange
+  - Score Teal
+  - Score Pink
+  - Score Purple
   layers:
   - Default
   - TransparentFX

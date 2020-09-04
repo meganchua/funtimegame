@@ -52,7 +52,7 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Score";
+                    blue.tag = "Score Black";
                     red.tag = "Death Red";
                     yellow.tag = "Death Orange";
                     green.tag = "Death Teal";
@@ -67,7 +67,7 @@ public class RandomColor : MonoBehaviour
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
                     blue.tag = "Death Black";
-                    red.tag = "Score";
+                    red.tag = "Score Red";
                     yellow.tag = "Death Orange";
                     green.tag = "Death Teal";
                     pink.tag = "Death Pink";
@@ -82,7 +82,7 @@ public class RandomColor : MonoBehaviour
                     PurpleText.enabled = false;
                     blue.tag = "Death Black";
                     red.tag = "Death Red";
-                    yellow.tag = "Score";
+                    yellow.tag = "Score Orange";
                     green.tag = "Death Teal";
                     pink.tag = "Death Pink";
                     purple.tag = "Death Purple";
@@ -97,7 +97,7 @@ public class RandomColor : MonoBehaviour
                     blue.tag = "Death Black";
                     red.tag = "Death Red";
                     yellow.tag = "Death Orange";
-                    green.tag = "Score";
+                    green.tag = "Score Teal";
                     pink.tag = "Death Pink";
                     purple.tag = "Death Purple";
                     break;
@@ -112,7 +112,7 @@ public class RandomColor : MonoBehaviour
                     red.tag = "Death Red";
                     yellow.tag = "Death Orange";
                     green.tag = "Death Teal";
-                    pink.tag = "Score";
+                    pink.tag = "Score Pink";
                     purple.tag = "Death Purple";
                     break;
                 case 6: //purple
@@ -127,7 +127,7 @@ public class RandomColor : MonoBehaviour
                     yellow.tag = "Death Orange";
                     green.tag = "Death Teal";
                     pink.tag = "Death Pink";
-                    purple.tag = "Score";
+                    purple.tag = "Score Purple";
                     break;
             }
 
