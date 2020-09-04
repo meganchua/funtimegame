@@ -23,12 +23,12 @@ public class RandomColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blue.tag = "Death";
-        red.tag = "Death";
-        yellow.tag = "Death";
-        green.tag = "Death";
-        pink.tag = "Death";
-        purple.tag = "Death";
+        blue.tag = "Death Black";
+        red.tag = "Death Red";
+        yellow.tag = "Death Orange";
+        green.tag = "Death Teal";
+        pink.tag = "Death Pink";
+        purple.tag = "Death Purple";
     }
 
     // Update is called once per frame
@@ -53,11 +53,11 @@ public class RandomColor : MonoBehaviour
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
                     blue.tag = "Score";
-                    red.tag = "Death";
-                    yellow.tag = "Death";
-                    green.tag = "Death";
-                    pink.tag = "Death";
-                    purple.tag = "Death";
+                    red.tag = "Death Red";
+                    yellow.tag = "Death Orange";
+                    green.tag = "Death Teal";
+                    pink.tag = "Death Pink";
+                    purple.tag = "Death Purple";
                     break;
                 case 2: //red
                     BlueText.enabled = false;
@@ -66,12 +66,12 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death";
+                    blue.tag = "Death Black";
                     red.tag = "Score";
-                    yellow.tag = "Death";
-                    green.tag = "Death";
-                    pink.tag = "Death";
-                    purple.tag = "Death";
+                    yellow.tag = "Death Orange";
+                    green.tag = "Death Teal";
+                    pink.tag = "Death Pink";
+                    purple.tag = "Death Purple";
                     break;
                 case 3: //yellow
                     BlueText.enabled = false;
@@ -80,12 +80,12 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death";
-                    red.tag = "Death";
+                    blue.tag = "Death Black";
+                    red.tag = "Death Red";
                     yellow.tag = "Score";
-                    green.tag = "Death";
-                    pink.tag = "Death";
-                    purple.tag = "Death";
+                    green.tag = "Death Teal";
+                    pink.tag = "Death Pink";
+                    purple.tag = "Death Purple";
                     break;
                 case 4: //green
                     BlueText.enabled = false;
@@ -94,12 +94,12 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = true;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death";
-                    red.tag = "Death";
-                    yellow.tag = "Death";
+                    blue.tag = "Death Black";
+                    red.tag = "Death Red";
+                    yellow.tag = "Death Orange";
                     green.tag = "Score";
-                    pink.tag = "Death";
-                    purple.tag = "Death";
+                    pink.tag = "Death Pink";
+                    purple.tag = "Death Purple";
                     break;
                 case 5: //pink
                     BlueText.enabled = false;
@@ -108,12 +108,12 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = true;
                     PurpleText.enabled = false;
-                    blue.tag = "Death";
-                    red.tag = "Death";
-                    yellow.tag = "Death";
-                    green.tag = "Death";
+                    blue.tag = "Death Black";
+                    red.tag = "Death Red";
+                    yellow.tag = "Death Orange";
+                    green.tag = "Death Teal";
                     pink.tag = "Score";
-                    purple.tag = "Death";
+                    purple.tag = "Death Purple";
                     break;
                 case 6: //purple
                     BlueText.enabled = false;
@@ -122,11 +122,11 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = true;
-                    blue.tag = "Death";
-                    red.tag = "Death";
-                    yellow.tag = "Death";
-                    green.tag = "Death";
-                    pink.tag = "Death";
+                    blue.tag = "Death Black";
+                    red.tag = "Death Red";
+                    yellow.tag = "Death Orange";
+                    green.tag = "Death Teal";
+                    pink.tag = "Death Pink";
                     purple.tag = "Score";
                     break;
             }
