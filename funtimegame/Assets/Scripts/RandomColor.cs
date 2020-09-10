@@ -12,6 +12,22 @@ public class RandomColor : MonoBehaviour
     public TMP_Text BlueText, RedText, YellowText, GreenText, PinkText, PurpleText;
     public GameObject blue, green, pink, purple, red, yellow;
 
+    public GameObject healthBar;
+
+    /*
+Fbac91
+
+303841
+
+30e3ca
+
+ff2e63
+
+aa96da
+
+ffbbcc
+    */
+
     public Canvas ColorCanvas;
 
     public float spawnRate = 5f;
