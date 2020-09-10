@@ -12,21 +12,10 @@ public class RandomColor : MonoBehaviour
     public TMP_Text BlueText, RedText, YellowText, GreenText, PinkText, PurpleText;
     public GameObject blue, green, pink, purple, red, yellow;
 
+
+    public Color RedColor, OrangeColor, PurpleColor, PinkColor, TealColor, BlackColor;
     public GameObject healthBar;
-
-    /*
-Fbac91
-
-303841
-
-30e3ca
-
-ff2e63
-
-aa96da
-
-ffbbcc
-    */
+    Renderer rend;
 
     public Canvas ColorCanvas;
 
@@ -39,12 +28,22 @@ ffbbcc
     // Start is called before the first frame update
     void Start()
     {
+        RedColor = new Color32(255, 46, 99, 255);
+        OrangeColor = new Color32(251, 172, 145, 255);
+        PurpleColor = new Color32(170, 150, 218, 255);
+        PinkColor = new Color32(255, 187, 204, 255);
+        TealColor = new Color32(48, 227, 202, 255);
+        BlackColor = new Color32(48, 56, 65, 255);
+
         blue.tag = "Death Black";
         red.tag = "Death Red";
         yellow.tag = "Death Orange";
         green.tag = "Death Teal";
         pink.tag = "Death Pink";
         purple.tag = "Death Purple";
+
+        rend = healthBar.GetComponent<SpriteRenderer>();
+        rend.material.SetColor("_Color", Color.white);
     }
 
     // Update is called once per frame
@@ -62,6 +61,8 @@ ffbbcc
             switch (whatToSpawn)
             {
                 case 1: //blue
+                    rend.material.SetColor("_Color", BlackColor);
+
                     BlueText.enabled = true;
                     RedText.enabled = false;
                     YellowText.enabled = false;
@@ -76,6 +77,8 @@ ffbbcc
                     purple.tag = "Death Purple";
                     break;
                 case 2: //red
+                    rend.material.SetColor("_Color", RedColor);
+
                     BlueText.enabled = false;
                     RedText.enabled = true;
                     YellowText.enabled = false;
@@ -90,6 +93,8 @@ ffbbcc
                     purple.tag = "Death Purple";
                     break;
                 case 3: //yellow
+                    rend.material.SetColor("_Color", OrangeColor);
+
                     BlueText.enabled = false;
                     RedText.enabled = false;
                     YellowText.enabled = true;
@@ -104,6 +109,8 @@ ffbbcc
                     purple.tag = "Death Purple";
                     break;
                 case 4: //green
+                    rend.material.SetColor("_Color", TealColor);
+
                     BlueText.enabled = false;
                     RedText.enabled = false;
                     YellowText.enabled = false;
@@ -118,6 +125,8 @@ ffbbcc
                     purple.tag = "Death Purple";
                     break;
                 case 5: //pink
+                    rend.material.SetColor("_Color", PinkColor);
+
                     BlueText.enabled = false;
                     RedText.enabled = false;
                     YellowText.enabled = false;
@@ -132,6 +141,8 @@ ffbbcc
                     purple.tag = "Death Purple";
                     break;
                 case 6: //purple
+                    rend.material.SetColor("_Color", PurpleColor);
+
                     BlueText.enabled = false;
                     RedText.enabled = false;
                     YellowText.enabled = false;
