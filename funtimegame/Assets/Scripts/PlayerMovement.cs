@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
         isGameOver = 0;
 
-        health = .45f;
-        decPerMin = 2f;
+        health = .17f;
+        decPerMin = 1f;
     }
 
     private void Update()
