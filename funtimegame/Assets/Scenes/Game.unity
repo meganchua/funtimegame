@@ -1465,7 +1465,6 @@ MonoBehaviour:
   purple: {fileID: 5793086383112736114, guid: 44981904f7748404f8dfedaf0c70b2d7, type: 3}
   red: {fileID: 6253115468660079610, guid: 91426e7643d604c479bf4d70ce11a734, type: 3}
   yellow: {fileID: 1091156808851892363, guid: 84417c26455bd264687408aaa6425440, type: 3}
-  healthBar: {fileID: 0}
   RedColor: {r: 0, g: 0, b: 0, a: 0}
   OrangeColor: {r: 0, g: 0, b: 0, a: 0}
   PurpleColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1492,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740500113
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2053,7 +2052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1213091872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2318,7 +2317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1227760882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2583,7 +2582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1356884618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3025,7 +3024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1617569109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3482,7 +3481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1902813407
 RectTransform:
   m_ObjectHideFlags: 0
