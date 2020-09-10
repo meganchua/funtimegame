@@ -52,6 +52,7 @@ public class RandomColor : MonoBehaviour
         if(PlayerMovement.health < 0)
         {
             ColorCanvas.sortingLayerName = "Default";
+            //Destroy(healthBar);
         }
 
         if (Time.time > nextSpawn)

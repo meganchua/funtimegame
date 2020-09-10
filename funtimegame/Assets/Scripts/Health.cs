@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
 
         if(PlayerMovement.health < 0)
         {
-            Destroy(front);
+            //Destroy(front);
             Destroy(back);
         }
     }
