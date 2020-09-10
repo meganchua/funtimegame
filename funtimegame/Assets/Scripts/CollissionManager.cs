@@ -92,7 +92,7 @@ public class CollissionManager : MonoBehaviour
             purple.SetActive(false);             
         }    
 
-        //GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
+        //healthBar.GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
         Destroy(other.gameObject);
 
         //if(other.gameObject.CompareTag("Death"))
