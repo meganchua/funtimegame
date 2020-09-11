@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     {
         health -= Time.deltaTime * decPerMin / 60f;
 
-        //Debug.Log(health);
         if(health <= 0)
         {
             isGameOver = 1;
@@ -61,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // arrow keys - DOESNT WORK
+        // arrow keys (DOESNT WORK)
         /*
         Vector3 pos = transform.position;
         if(Input.GetKey("a"))

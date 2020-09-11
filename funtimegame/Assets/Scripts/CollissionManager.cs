@@ -92,36 +92,23 @@ public class CollissionManager : MonoBehaviour
             purple.SetActive(false);             
         }    
 
-        //healthBar.GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
-        Destroy(other.gameObject);
-
-        //if(other.gameObject.CompareTag("Death"))
         if(other.gameObject.tag.Contains("Death"))
         {
             // Health goes down
             PlayerMovement.health -= 0.01f;
-
-            // Changes the color of player to color of what it ran into
-            GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
-
-            Destroy(other.gameObject);
         }
-        //else if(other.gameObject.CompareTag("Score"))
         else if(other.gameObject.tag.Contains("Score"))
         {
             // Score goes up
             Score.scoreAmount += 1;
 
             // Health goes up
-            if(PlayerMovement.health > .16f)
+            if(PlayerMovement.health > .155f)
                 PlayerMovement.health = .17f;
             else                
                 PlayerMovement.health += 0.025f; 
-
-            // Changes the color of player to color of what it ran into
-            GetComponent<SpriteRenderer>().color = other.gameObject.GetComponent<SpriteRenderer>().color;
-
-            Destroy(other.gameObject);
         }
+
+        Destroy(other.gameObject);
     }
 }
