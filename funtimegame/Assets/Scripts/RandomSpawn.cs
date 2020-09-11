@@ -19,7 +19,7 @@ public class RandomSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = Random.Range(0.5f, 1.5f);
+        spawnRate = 1.0f;//Random.Range(0.5f, 1.5f);
         InvokeRepeating("Update", spawnRate, repeat);
     }
 
