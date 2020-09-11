@@ -19,6 +19,8 @@ public class RandomColor : MonoBehaviour
 
     public Canvas ColorCanvas;
 
+    public int setTag;
+
     public float spawnRate = 5f;
 
     float nextSpawn = 0f;
@@ -44,7 +46,9 @@ public class RandomColor : MonoBehaviour
 
         rend = healthBar.GetComponent<SpriteRenderer>();
         rend.material.SetColor("_Color", Color.white);
-    }
+
+        setTag = 0;
+    }  
 
     // Update is called once per frame
     void Update()
@@ -58,6 +62,7 @@ public class RandomColor : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             whatToSpawn = Random.Range(1, 7); //7 is exclusive
+            setTag = whatToSpawn;
 
             switch (whatToSpawn)
             {
@@ -70,12 +75,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Score Black";
-                    red.tag = "Death Red";
-                    yellow.tag = "Death Orange";
-                    green.tag = "Death Teal";
-                    pink.tag = "Death Pink";
-                    purple.tag = "Death Purple";
                     break;
                 case 2: //red
                     rend.material.SetColor("_Color", RedColor);
@@ -86,12 +85,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death Black";
-                    red.tag = "Score Red";
-                    yellow.tag = "Death Orange";
-                    green.tag = "Death Teal";
-                    pink.tag = "Death Pink";
-                    purple.tag = "Death Purple";
                     break;
                 case 3: //yellow
                     rend.material.SetColor("_Color", OrangeColor);
@@ -102,12 +95,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death Black";
-                    red.tag = "Death Red";
-                    yellow.tag = "Score Orange";
-                    green.tag = "Death Teal";
-                    pink.tag = "Death Pink";
-                    purple.tag = "Death Purple";
                     break;
                 case 4: //green
                     rend.material.SetColor("_Color", TealColor);
@@ -118,12 +105,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = true;
                     PinkText.enabled = false;
                     PurpleText.enabled = false;
-                    blue.tag = "Death Black";
-                    red.tag = "Death Red";
-                    yellow.tag = "Death Orange";
-                    green.tag = "Score Teal";
-                    pink.tag = "Death Pink";
-                    purple.tag = "Death Purple";
                     break;
                 case 5: //pink
                     rend.material.SetColor("_Color", PinkColor);
@@ -134,12 +115,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = true;
                     PurpleText.enabled = false;
-                    blue.tag = "Death Black";
-                    red.tag = "Death Red";
-                    yellow.tag = "Death Orange";
-                    green.tag = "Death Teal";
-                    pink.tag = "Score Pink";
-                    purple.tag = "Death Purple";
                     break;
                 case 6: //purple
                     rend.material.SetColor("_Color", PurpleColor);
@@ -150,12 +125,6 @@ public class RandomColor : MonoBehaviour
                     GreenText.enabled = false;
                     PinkText.enabled = false;
                     PurpleText.enabled = true;
-                    blue.tag = "Death Black";
-                    red.tag = "Death Red";
-                    yellow.tag = "Death Orange";
-                    green.tag = "Death Teal";
-                    pink.tag = "Death Pink";
-                    purple.tag = "Score Purple";
                     break;
             }
 
@@ -163,4 +132,69 @@ public class RandomColor : MonoBehaviour
 
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        switch(setTag)
+        {
+            case 1: //blue
+                blue.tag = "Score Black";
+                red.tag = "Death Red";
+                yellow.tag = "Death Orange";
+                green.tag = "Death Teal";
+                pink.tag = "Death Pink";
+                purple.tag = "Death Purple";
+                Debug.Log(blue.tag);
+                break;
+            case 2: //red
+                blue.tag = "Death Black";
+                red.tag = "Score Red";
+                yellow.tag = "Death Orange";
+                green.tag = "Death Teal";
+                pink.tag = "Death Pink";
+                purple.tag = "Death Purple";
+                Debug.Log(red.tag);
+                break;
+            case 3: //yellow
+                blue.tag = "Death Black";
+                red.tag = "Death Red";
+                yellow.tag = "Score Orange";
+                green.tag = "Death Teal";
+                pink.tag = "Death Pink";
+                purple.tag = "Death Purple";
+                Debug.Log(yellow.tag);
+                break;
+            case 4: //green
+                blue.tag = "Death Black";
+                red.tag = "Death Red";
+                yellow.tag = "Death Orange";
+                green.tag = "Score Teal";
+                pink.tag = "Death Pink";
+                purple.tag = "Death Purple";
+                Debug.Log(green.tag);
+                break;
+            case 5: //pink
+                blue.tag = "Death Black";
+                red.tag = "Death Red";
+                yellow.tag = "Death Orange";
+                green.tag = "Death Teal";
+                pink.tag = "Score Pink";
+                purple.tag = "Death Purple";
+                Debug.Log(pink.tag);
+                break;
+            case 6: //purple
+                blue.tag = "Death Black";
+                red.tag = "Death Red";
+                yellow.tag = "Death Orange";
+                green.tag = "Death Teal";
+                pink.tag = "Death Pink";
+                purple.tag = "Score Purple";
+                Debug.Log(purple.tag);
+                break;
+            
+        }
+    }  
+
+
 }

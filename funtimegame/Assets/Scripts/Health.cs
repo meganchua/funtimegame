@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
     Vector3 localScale;
 
-    public GameObject front, back;
+    public GameObject front;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,7 @@ public class Health : MonoBehaviour
 
         if(PlayerMovement.health < 0)
         {
-            //Destroy(front);
-            Destroy(back);
+            front.GetComponent<Renderer>().enabled = false;
         }
     }
 }
