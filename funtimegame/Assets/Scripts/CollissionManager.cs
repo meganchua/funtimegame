@@ -6,6 +6,7 @@ public class CollissionManager : MonoBehaviour
 {
     // changing bucket color
     public GameObject white, black, red, orange, teal, pink, purple;
+    public AudioSource good, bad;
 
     void Start()
     {
@@ -16,12 +17,18 @@ public class CollissionManager : MonoBehaviour
         teal.SetActive(false);
         pink.SetActive(false);
         purple.SetActive(false);
+
+        //GetComponent<AudioSource>().playOnAwake = false;
+        /*good = GetComponent<AudioSource>();
+        bad = GetComponent<AudioSource>();*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        /*bad.Play();*/
+
         // changing bucket color
-        if(other.gameObject.tag.Contains("Black"))
+        if (other.gameObject.tag.Contains("Black"))
         {
             white.SetActive(false);
             black.SetActive(true);
@@ -96,11 +103,13 @@ public class CollissionManager : MonoBehaviour
         {
             // Health goes down
             PlayerMovement.health -= 0.01f;
+            bad.Play();
         }
         else if(other.gameObject.tag.Contains("Score"))
         {
             // Score goes up
             Score.scoreAmount += 1;
+            good.Play();
 
             // Health goes up
             if(PlayerMovement.health > .155f)
