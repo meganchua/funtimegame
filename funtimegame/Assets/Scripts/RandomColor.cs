@@ -11,6 +11,7 @@ public class RandomColor : MonoBehaviour
     //edge case: at the start of the game, some of the tags are wrong
     public TMP_Text BlueText, RedText, YellowText, GreenText, PinkText, PurpleText;
     public GameObject blue, green, pink, purple, red, yellow;
+    private GameObject newPrefab;
 
 
     public Color RedColor, OrangeColor, PurpleColor, PinkColor, TealColor, BlackColor;
@@ -135,65 +136,116 @@ public class RandomColor : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
-        switch(setTag)
+        //newPrefab = (GameObject)Instantiate(other.gameObject, transform.position, Quaternion.identity);
+        Debug.Log("before: " + other.gameObject.tag);
+
+        switch (setTag)
         {
             case 1: //blue
-                blue.tag = "Score Black";
+                if (other.gameObject.tag.Contains("Black"))
+                {
+                    other.gameObject.tag = "Score Black";
+                } else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                
+                /*blue.tag = "Score Black";
                 red.tag = "Death Red";
                 yellow.tag = "Death Orange";
                 green.tag = "Death Teal";
                 pink.tag = "Death Pink";
                 purple.tag = "Death Purple";
-                Debug.Log(blue.tag);
+                Debug.Log(blue.tag);*/
                 break;
             case 2: //red
-                blue.tag = "Death Black";
+                if (other.gameObject.tag.Contains("Red"))
+                {
+                    other.gameObject.tag = "Score Red";
+                }
+                else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                /*blue.tag = "Death Black";
                 red.tag = "Score Red";
                 yellow.tag = "Death Orange";
                 green.tag = "Death Teal";
                 pink.tag = "Death Pink";
                 purple.tag = "Death Purple";
-                Debug.Log(red.tag);
+                Debug.Log(red.tag);*/
                 break;
             case 3: //yellow
-                blue.tag = "Death Black";
+                if (other.gameObject.tag.Contains("Orange"))
+                {
+                    other.gameObject.tag = "Score Orange";
+                }
+                else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                /*blue.tag = "Death Black";
                 red.tag = "Death Red";
                 yellow.tag = "Score Orange";
                 green.tag = "Death Teal";
                 pink.tag = "Death Pink";
                 purple.tag = "Death Purple";
-                Debug.Log(yellow.tag);
+                Debug.Log(yellow.tag);*/
                 break;
             case 4: //green
-                blue.tag = "Death Black";
+                if (other.gameObject.tag.Contains("Teal"))
+                {
+                    other.gameObject.tag = "Score Teal";
+                }
+                else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                /*blue.tag = "Death Black";
                 red.tag = "Death Red";
                 yellow.tag = "Death Orange";
                 green.tag = "Score Teal";
                 pink.tag = "Death Pink";
                 purple.tag = "Death Purple";
-                Debug.Log(green.tag);
+                Debug.Log(green.tag);*/
                 break;
             case 5: //pink
-                blue.tag = "Death Black";
+                if (other.gameObject.tag.Contains("Pink"))
+                {
+                    other.gameObject.tag = "Score Pink";
+                }
+                else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                /*blue.tag = "Death Black";
                 red.tag = "Death Red";
                 yellow.tag = "Death Orange";
                 green.tag = "Death Teal";
                 pink.tag = "Score Pink";
                 purple.tag = "Death Purple";
-                Debug.Log(pink.tag);
+                Debug.Log(pink.tag);*/
                 break;
             case 6: //purple
-                blue.tag = "Death Black";
+                if (other.gameObject.tag.Contains("Purple"))
+                {
+                    other.gameObject.tag = "Score Purple";
+                }
+                else
+                {
+                    other.gameObject.tag = "Death";
+                }
+                /*blue.tag = "Death Black";
                 red.tag = "Death Red";
                 yellow.tag = "Death Orange";
                 green.tag = "Death Teal";
                 pink.tag = "Death Pink";
                 purple.tag = "Score Purple";
-                Debug.Log(purple.tag);
+                Debug.Log(purple.tag);*/
                 break;
             
         }
+        Debug.Log("after: " + other.gameObject.tag);
     }  
 
 
