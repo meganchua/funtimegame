@@ -16,10 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public static float health;
     public float decPerMin;
 
-    public AudioSource deathSplat;
+    // public AudioSource deathSplat;
+    // public AudioClip deathSplatter;
 
     private void Start()
     {
+        //deathSplat = GetComponent<AudioSource>();
+
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
 
@@ -35,11 +38,13 @@ public class PlayerMovement : MonoBehaviour
 
         if(health <= 0)
         {
+            //AudioSource.PlayClipAtPoint(deathSplat, transform.position);
+            //deathSplat.PlayOneShot(deathSplatter);
             isGameOver = 1;
             finalScore = Score.scoreAmount;
             gameOver.GameOverMenu(finalScore);
             Destroy(this.gameObject);     
-            deathSplat.Play();     
+            //deathSplat.Play();     
         }
 
         // touch input
