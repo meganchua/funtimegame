@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    Vector3 localScale;
-
     public GameObject front;
+    Vector3 localScale;
 
     // Start is called before the first frame update
     void Start()
