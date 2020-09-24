@@ -35,11 +35,28 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
+        StartCoroutine(WaitForRestartSceneLoad());
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("Start");
+        //SceneManager.LoadScene("Start");
+        StartCoroutine(WaitForStartSceneLoad()); 
     }
+
+    private IEnumerator WaitForStartSceneLoad()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("Start");
+
+    }
+
+    private IEnumerator WaitForRestartSceneLoad()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("Game");
+
+    }
+
+
 }
