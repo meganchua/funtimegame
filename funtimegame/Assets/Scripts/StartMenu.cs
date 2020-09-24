@@ -16,8 +16,5 @@ public class StartMenu : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene("Game");
 
-    public void PlayGame() 
-    { 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 } // class
