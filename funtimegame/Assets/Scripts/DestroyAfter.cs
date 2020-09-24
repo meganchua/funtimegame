@@ -10,8 +10,6 @@ public class DestroyAfter : MonoBehaviour
     void Update()
     {
         if (transform.position.y < -7)
-        {
             Destroy(this.gameObject);
-        }
     }
 }

@@ -6,23 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float moveSpeed;
+    public static float health;
+    public float decPerMin;
 
     public static int isGameOver;
-
     public GameOver gameOver;
     public Score score;
     public int finalScore;
 
-    public static float health;
-    public float decPerMin;
-
-    // public AudioSource deathSplat;
-    // public AudioClip deathSplatter;
-
     private void Start()
     {
-        //deathSplat = GetComponent<AudioSource>();
-
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
 
@@ -38,13 +31,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(health <= 0)
         {
-            //AudioSource.PlayClipAtPoint(deathSplat, transform.position);
-            //deathSplat.PlayOneShot(deathSplatter);
             isGameOver = 1;
             finalScore = Score.scoreAmount;
             gameOver.GameOverMenu(finalScore);
-            Destroy(this.gameObject);     
-            //deathSplat.Play();     
+            Destroy(this.gameObject);         
         }
 
         // touch input
@@ -57,19 +47,16 @@ public class PlayerMovement : MonoBehaviour
                 case TouchPhase.Began:
                     if (touch.position.x < Screen.width / 2)
                         rb.velocity = new Vector2(-moveSpeed, 0f);
-
                     if(touch.position.x > Screen.width / 2)
                         rb.velocity = new Vector2(moveSpeed, 0f);
                     break;
-
                 case TouchPhase.Ended:
                     rb.velocity = new Vector2(0f, 0f);
                     break;
             }
         }
 
-        // arrow keys (DOESNT WORK)
-        /*
+        /* arrow keys (DOESNT WORK)
         Vector3 pos = transform.position;
         if(Input.GetKey("a"))
         {
@@ -84,4 +71,4 @@ public class PlayerMovement : MonoBehaviour
         transform.position = pos;
         */
     }
-}
+} // class

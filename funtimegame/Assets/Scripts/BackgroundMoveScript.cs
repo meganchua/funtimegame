@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundMoveScript : MonoBehaviour {
-
 	// Background scroll speed can be set in Inspector with slider
 	[Range(1f, 20f)]
 	public float scrollSpeed = 1f;
@@ -18,7 +17,8 @@ public class BackgroundMoveScript : MonoBehaviour {
 	float newPos;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		// Getting backgrounds start position
 		startPos = transform.position;
 	}
