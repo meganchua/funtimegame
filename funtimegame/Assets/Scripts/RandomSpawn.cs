@@ -11,15 +11,13 @@ public class RandomSpawn : MonoBehaviour
 
     private float spawnRate;
     public float repeat = 10.0f;
-
     float nextSpawn = 0f;
-
     int whatToSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = 1.0f;//Random.Range(0.5f, 1.5f);
+        spawnRate = 1.0f; // Random.Range(0.5f, 1.5f);
         InvokeRepeating("Update", spawnRate, repeat);
     }
 
@@ -30,10 +28,9 @@ public class RandomSpawn : MonoBehaviour
 
         if(PlayerMovement.isGameOver == 0)
         {
-
             if (Time.time > nextSpawn)
             {
-                whatToSpawn = Random.Range(1, 7); //7 is exclusive
+                whatToSpawn = Random.Range(1, 7); // 7 is exclusive
   
                 switch (whatToSpawn)
                 {
@@ -55,14 +52,9 @@ public class RandomSpawn : MonoBehaviour
                     case 6:
                         Instantiate(prefab6, position, Quaternion.identity);
                         break;
-            }
-            
-            nextSpawn = Time.time + spawnRate;
-        }
-
-        } //playermovement
-
-    }
-
- 
-}
+                }
+                nextSpawn = Time.time + spawnRate;
+            } 
+        } 
+    } 
+} // class

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollissionManager : MonoBehaviour
 {
-    // changing bucket color
     public GameObject white, black, red, orange, teal, pink, purple;
     public AudioSource good, bad;
 
@@ -17,17 +16,10 @@ public class CollissionManager : MonoBehaviour
         teal.SetActive(false);
         pink.SetActive(false);
         purple.SetActive(false);
-
-        //GetComponent<AudioSource>().playOnAwake = false;
-        /*good = GetComponent<AudioSource>();
-        bad = GetComponent<AudioSource>();*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        /*bad.Play();*/
-
-        // changing bucket color
         if (other.gameObject.tag.Contains("Black"))
         {
             white.SetActive(false);
@@ -101,23 +93,19 @@ public class CollissionManager : MonoBehaviour
 
         if(other.gameObject.tag.Contains("Death"))
         {
-            // Health goes down
             PlayerMovement.health -= 0.01f;
             bad.Play();
         }
         else if(other.gameObject.tag.Contains("Score"))
         {
-            // Score goes up
             Score.scoreAmount += 1;
             good.Play();
 
-            // Health goes up
             if(PlayerMovement.health > .155f)
                 PlayerMovement.health = .17f;
             else                
                 PlayerMovement.health += 0.025f; 
         }
-
         Destroy(other.gameObject);
     }
 }
