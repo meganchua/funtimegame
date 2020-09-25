@@ -494,7 +494,6 @@ MonoBehaviour:
   scoreText: {fileID: 159021323}
   highScoreText: {fileID: 2043148695}
   highScoreCongratsText: {fileID: 1942157215}
-  buttonAudio: {fileID: 1447275638}
 --- !u!82 &79930438
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1663,12 +1662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcc1b2ac4e4402469be44b95a358a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlueText: {fileID: 1356884619}
-  RedText: {fileID: 1227760883}
-  YellowText: {fileID: 740500114}
-  GreenText: {fileID: 1617569110}
-  PinkText: {fileID: 1213091873}
-  PurpleText: {fileID: 1902813408}
   blue: {fileID: 6459327612936225064, guid: c54da2fac7909a74cb34c324fe696274, type: 3}
   green: {fileID: 4562377113723320112, guid: 200c1ce7b0c4f534c95b09bb209976bb, type: 3}
   pink: {fileID: 6316978344332113985, guid: c4fc9144e51f0bb42a390c5b93b570a8, type: 3}
@@ -1681,9 +1674,14 @@ MonoBehaviour:
   PinkColor: {r: 0, g: 0, b: 0, a: 0}
   TealColor: {r: 0, g: 0, b: 0, a: 0}
   BlackColor: {r: 0, g: 0, b: 0, a: 0}
+  BlueText: {fileID: 1356884619}
+  RedText: {fileID: 1227760883}
+  YellowText: {fileID: 740500114}
+  GreenText: {fileID: 1617569110}
+  PinkText: {fileID: 1213091873}
+  PurpleText: {fileID: 1902813408}
   healthBar: {fileID: 1980222786}
   ColorCanvas: {fileID: 666410952}
-  setTag: 0
   spawnRate: 5
 --- !u!61 &666410955
 BoxCollider2D:
@@ -3510,10 +3508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e1dece7264145ad98388c6318cae8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decPerMin: 0
   gameOver: {fileID: 79930437}
   score: {fileID: 541796894}
   finalScore: 0
-  decPerMin: 0
 --- !u!58 &1477433957
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4528,7 +4526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1942157214
 RectTransform:
   m_ObjectHideFlags: 0
